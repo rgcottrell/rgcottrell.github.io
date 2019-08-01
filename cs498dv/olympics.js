@@ -79,7 +79,7 @@ function render_country_chart() {
         .attr("text-anchor", "middle")
         .attr("font-family", "Arial")
         .attr("font-size", "20px")
-        .text("By Country");
+        .text("Medals By Country");
 
     var button = svg.append("g")
     button.append("rect")
@@ -172,7 +172,7 @@ function render_sport_chart() {
         .attr("text-anchor", "middle")
         .attr("font-family", "Arial")
         .attr("font-size", "20px")
-        .text("By Sport");
+        .text("Medals By Sport");
 
     var button = svg.append("g")
     button.append("rect")
