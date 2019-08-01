@@ -87,7 +87,12 @@ function render_country_chart() {
         .attr("y", 0)
         .attr("width", 120)
         .attr("height", 30)
-        .attr("fill", "red");
+        .attr("fill", "red")
+        .classed("button", true)
+        .on("click", function () {
+            window.mode = "sport";
+            render_sport_chart();
+        });
     button.append("text")
         .attr("x", 520)
         .attr("y", 20)
@@ -95,12 +100,8 @@ function render_country_chart() {
         .attr("font-family", "Arial")
         .attr("font-size", "14px")
         .attr("fill", "white")
+        .attr("pointer-events", "none")
         .text("Switch to Sport")
-        .classed("button", true)
-        .on("click", function () {
-            window.mode = "sport";
-            render_sport_chart();
-        });
 
     var circle = svg.append("g")
         .selectAll("circle")
@@ -133,6 +134,7 @@ function render_country_chart() {
         .attr("text-anchor", "middle")
         .attr("font-family", "Arial")
         .attr("font-size", "9px")
+        .attr("pointer-events", "none")
         .text(function (d) { return (d.r > 12) ? d.data.country : ""; });
 }
 
@@ -180,7 +182,12 @@ function render_sport_chart() {
         .attr("y", 0)
         .attr("width", 120)
         .attr("height", 30)
-        .attr("fill", "blue");
+        .attr("fill", "blue")
+        .classed("button", true)
+        .on("click", function () {
+            window.mode = "country";
+            render_country_chart();
+        });
     button.append("text")
         .attr("x", 520)
         .attr("y", 20)
@@ -188,12 +195,8 @@ function render_sport_chart() {
         .attr("font-family", "Arial")
         .attr("font-size", "14px")
         .attr("fill", "white")
-        .text("Switch to Country")
-        .classed("button", true)
-        .on("click", function () {
-            window.mode = "country";
-            render_country_chart();
-        });
+        .attr("pointer-events", "none")
+        .text("Switch to Country");
 
     var circle = svg.append("g")
         .selectAll("circle")
@@ -227,5 +230,6 @@ function render_sport_chart() {
         .attr("text-anchor", "middle")
         .attr("font-family", "Arial")
         .attr("font-size", "9px")
+        .attr("pointer-events", "none")
         .text(function (d) { return (d.r > 12) ? d.data.sport : ""; });
 }
