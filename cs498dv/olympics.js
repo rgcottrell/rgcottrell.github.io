@@ -4,7 +4,7 @@ async function init() {
     window.mode = "country";
 
     // Load the JSON data.
-    window.olympics = d3.json("olympics.json");
+    window.olympics = await d3.json("olympics.json");
 
     // Create a tooltip.
     window.tooltip = d3.select("body")
