@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#visualization {
+    width: 910px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+}
+
+#navigation {
+    float: left;
+    background-color: aquamarine;
+    width: 280px;
+}
+
+#navigation .header {
+    font-weight: bold;
+}
+
+#content {
+    float: right;
+    background-color: lightgray;
+    width: 620px;
+}
+
+#chart {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 600px;
+}
+
+.navitem {
+    padding: 3px;
+}
+
+.navitem:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.navitem.selected {
+    background-color: red;
+    color: white;
+}
+
+.navitem.selected:hover {
+    cursor: default;
+}
+
+.circle:hover {
+    cursor: pointer;
+    fill: #f0f0f0;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    height: 35px;
+    padding: 2px;
+    background-color: lightsteelblue;
+    border: 0px;
+    border-radius: 5px;
+    pointer-events: none;
+}

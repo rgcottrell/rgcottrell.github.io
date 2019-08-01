@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="olympics.css">
+    <title>CS 498 Data Visualization: Assignment 7-3-3</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="olympics.js"></script>
+</head>
+
+<body onload="init()">
+    <h1>CS 498 Data Visualization: Assignment 7-3-3</h1>
+    <p>
+        Submitted by Robert Cottrell (rgc3)<br>
+        Summer 2019
+    </p>
+
+    <div id="visualization">
+        <h2>The Summer Olympics: Winners</h2>
+        <p>
+            Every four years, except for times of global conflict, the nations of the world come together, except for
+            the occassional boycott over some petty political squabble, to compete in the spirit of friendship and
+            sportsmanship in the Summer Olympics. It's an honor just to be nominated, but which countries end up taking
+            home the gold, silver, or bronze?
+        </p>
+
+
+        <div id="navigation">
+            <p class="header">Editions:</p>
+            <div id="editions"></div>
+        </div>
+
+        <div id="content">
+            <svg id="chart" width="600" height="700"></svg>
+        </div>
+    </div>
+
+</body>
+
+</html>
